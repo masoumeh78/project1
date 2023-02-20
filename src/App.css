@@ -1,4 +1,38 @@
-.Form {
+.login-form {
+  max-width: 400px;
+  padding: 20px;
+  /* width: 40%; */
+  margin: 20px auto;
+  box-shadow: 3px 3px 10px #ccc;
+  border-radius: 10px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.ant-col-rtl .login-form-forgot {
+  float: left;
+}
+
+.login-form-button {
+  width: 100%;
+  background-color: orange;
+}
+
+h2 {
+  text-align: center;
+}
+
+Button:hover {
+  box-shadow: 0 3px 3px rgb(185, 185, 185);
+  background-color: none;
+}
+
+
+
+
+/* .Form {
   padding: 15px;
   width: 40%;
   margin: 20px auto;
@@ -18,19 +52,19 @@ input {
 
 .input {
   margin: 10px auto;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
-input:hover {
-  box-shadow: 0 3px 3px rgb(185, 185, 185);
-}
-.checkbox{
+
+.checkbox {
   display: inline;
   width: auto;
   float: right;
+  padding: 30px;
+  margin-right: 70px;
 }
-span {
-  direction: rtl;
+.button-div{
+  margin-bottom: 50px;
 }
 .button-S {
   width: 30%;
@@ -44,7 +78,7 @@ span {
   border: none;
 }
 
-.button-L{
+.button-L {
   width: 30%;
   padding: 15px;
   margin-top: 10px;
@@ -65,4 +99,4 @@ button:hover {
   .Form {
     width: 450px;
   }
-}
+} */
