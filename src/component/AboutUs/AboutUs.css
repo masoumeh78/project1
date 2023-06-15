@@ -1,0 +1,19 @@
+.about-us {
+    background-color: rgb(255, 238, 215);
+    padding: 3rem 5rem;
+}
+.text-center{
+    text-align: center;
+}
+
+.text-orange {
+    color: rgb(240, 165, 0);
+}
+.question >.btn-sign-in{
+    margin:10px auto;
+    font-size: 1rem;
+
+}
+.post-description{
+    text-align: justify;
+}

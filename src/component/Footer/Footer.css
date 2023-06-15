@@ -1,0 +1,163 @@
+.footer {
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+
+.footer>.footer-content {
+    padding: 3rem 7rem;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    gap: 6rem;
+}
+
+.faHome {
+    color: rgb(240, 165, 0);
+    display: inline;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.footer-content>.col {
+    max-width: 7rem;
+}
+
+.footer-content>.col-1 {
+    max-width: 20rem;
+}
+
+.col>.title {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.col-1>.title {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+.col>.text {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    color: rgb(204, 204, 204);
+    transition: 0.4s;
+}
+
+.col-1>.text {
+    font-size: 1rem;
+    text-align: justify;
+    color: rgb(204, 204, 204);
+
+}
+
+.col>.text-social {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    color: rgb(204, 204, 204);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.col>.text:hover {
+    color:  rgb(240, 165, 0);
+}
+
+.col>.c-item {
+    display: flex;
+}
+
+.c-item>svg {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    margin-left: 12px;
+    color: white;
+    margin-bottom: 0.25rem;
+    transition: 0.4s;
+}
+
+.c-item>svg:hover {
+    color: rgb(240, 165, 0);
+}
+
+
+.email-input {
+    width: max-content;
+    margin-top: 0.75rem;
+}
+
+.email-input>.input {
+    background-color: black;
+    border: 1px solid rgb(240, 165, 0);
+    color: rgb(240, 165, 0);
+}
+
+
+.input::placeholder {
+    color: rgb(240, 165, 0);
+}
+
+.input:hover {
+    ::placeholder {
+        color: white;
+    }
+
+}
+
+.email-input>.input-button {
+    background-color: rgb(240, 165, 0);
+    transition: 0.4s;
+}
+
+.email-input>.input-button:hover {
+    color: rgb(240, 165, 0);
+    background-color: white;
+}
+
+.col>span {
+    &.text {
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+}
+
+.bottom-bar>.bottom-bar-content {
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.bottom-bar-content>.text {
+    font-size: 0.85rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .footer>.footer-content {
+        padding: 3rem;
+        display: block;
+        width: 100%;
+
+    }
+
+    .footer-content>.col,
+    .footer-content>.col-1,
+    .footer-content>.col-1>.text {
+        padding-top: 1rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    Input {
+        padding: 10px auto;
+    }
+}

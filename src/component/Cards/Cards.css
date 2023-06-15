@@ -1,0 +1,69 @@
+.cards {
+    padding: 3rem 9rem;
+    background: #fff;
+}
+
+.cards>h1 {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding-bottom: 0;
+    display: inline;
+}
+
+.padding-top-0 {
+    padding-top: 0;
+}
+
+.cards-hover {
+    transition: 0.4s;
+}
+
+.cards-hover:hover {
+    box-shadow: 1px 3px 15px #cccbcb;
+}
+
+.opacity-text {
+    color: rgba(0, 0, 0, 0.45);
+
+}
+
+.color-orange {
+    color: rgb(240, 165, 0);
+}
+
+
+.cards>.anticon {
+    vertical-align: auto;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.vertical-align {
+    vertical-align: baseline;
+    margin-left: 5px;
+    padding-right: 5px;
+}
+
+.float-left {
+    float: left;
+}
+Card img {
+    height:"200px";
+}
+
+@media only screen and (max-width:580px) {
+
+    .cards>h1 {
+        text-align: center;
+    }
+
+    .item-center {
+        padding: 10px auto;
+    }
+}
