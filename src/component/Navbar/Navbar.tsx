@@ -1,15 +1,13 @@
-import React, { Fragment, useState } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 import Logo from "./logo.png";
-
-import { ShoppingOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
 import SignUpModal from './SignUpModal';
 
-
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ShoppingOutlined } from '@ant-design/icons';
 
 const navigation = [
     { name: 'فهرست', href: 'فهرست' },
@@ -26,7 +24,6 @@ function classNames(...classes: any[]) {
 
 
 export default function Navbar() {
-
     return (
         <>
             <Disclosure as="nav" className="bg-nav">
@@ -69,34 +66,24 @@ export default function Navbar() {
                                             {navigation.map((item) => (
 
                                                 <Link to={item.href}
-                                                key={item.name}
-                                                className={classNames(
-                                                            'text-white orange-hover px-3 py-2 text-sm font-medium'
-                                                        )}
+                                                    key={item.name}
+                                                    className={classNames(
+                                                        'text-white orange-hover px-3 py-2 text-sm font-medium'
+                                                    )}
                                                 >
                                                     {item.name}
                                                 </Link>
-
                                             ))}
                                         </div>
                                     </div>
                                 </div>
 
-
                                 {/* shopping icon and signup */}
 
                                 <div className=" inset-y-0 right-0 flex items-center pr-2 
                                         sm:static sm:inset-auto sm:pr-0 navbar ">
-                                            
-                                    <button
-                                        type="button"
-                                        className="p-1 focus:outline-none btn-sign-in"
 
-                                    >
-                                        <SignUpModal />
-                                     
-                                    </button>
-
+                                    <SignUpModal />
                                     <button
                                         type="button">
                                         <ShoppingOutlined className="h-6 w-6 p-1 orange-hover padding-r-15 shopping-white"
@@ -145,27 +132,9 @@ export default function Navbar() {
                                 ))}
                             </div>
                         </Disclosure.Panel>
-
-
-
                     </>
                 )}
             </Disclosure>
-
         </>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     )
 }

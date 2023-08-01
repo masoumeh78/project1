@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" Component={Home} />
-          <Route path="/فهرست" element={<Listing/>} />
+          <Route path="/فهرست" element={<Listing />} />
         </Routes>
         <Footer />
       </Router>

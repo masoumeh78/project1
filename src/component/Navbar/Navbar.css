@@ -24,7 +24,7 @@ body {
 
 .btn-sign-in:hover {
     color: rgb(240, 165, 0);
-    border-color: rgb(240, 165, 0);
+    border: 2px solid rgb(240, 165, 0);
 }
 .orange-hover{
     transition: 0.4s;

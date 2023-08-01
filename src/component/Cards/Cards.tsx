@@ -53,7 +53,7 @@ function Cards(props: any) {
 
           {Listing.map((item) => (
             // //////
-            <div className="flex flex-col-reverse padding-botton-25 ">
+            <div key={item.userName} className="flex flex-col-reverse padding-botton-25 ">
               <Link to={item.href}>
                 <Card
                   className='cards-hover '
@@ -83,26 +83,6 @@ function Cards(props: any) {
                 </Card>
               </Link>
             </div>
-
-
-            //////////
-
-
-
-
-
-
-
-
-            // <div key={item.name} className="flex flex-col-reverse padding-botton-25">
-            //   <dt className="text-base leading-7  hover:text-white ">
-
-            //   </dt>
-            //   <dd className="text-2xl font-bold leading-9 tracking-tight text-white">
-            //     <div className='circle-job '>
-            //     </div>
-            //   </dd>
-            // </div>
           ))}
         </dl>
       </div>

@@ -64,7 +64,7 @@
 }
 
 .col>.text:hover {
-    color:  rgb(240, 165, 0);
+    color: rgb(240, 165, 0);
 }
 
 .col>.c-item {
@@ -88,6 +88,12 @@
 .email-input {
     width: max-content;
     margin-top: 0.75rem;
+    border-radius: 5px;
+}
+
+.email-input:hover {
+    border: 1px solid white;
+
 }
 
 .email-input>.input {
@@ -101,16 +107,10 @@
     color: rgb(240, 165, 0);
 }
 
-.input:hover {
-    ::placeholder {
-        color: white;
-    }
-
-}
-
 .email-input>.input-button {
     background-color: rgb(240, 165, 0);
     transition: 0.4s;
+    color: black;
 }
 
 .email-input>.input-button:hover {
@@ -118,13 +118,12 @@
     background-color: white;
 }
 
-.col>span {
-    &.text {
-        display: block;
-        margin-bottom: 10px;
-        cursor: pointer;
-    }
+.col> span.text {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
+
 
 .bottom-bar>.bottom-bar-content {
     color: white;
@@ -157,7 +156,9 @@
         text-align: center;
     }
 
-    Input {
-        padding: 10px auto;
+    .col>.c-item {
+        display: flex;
+        justify-content: center;
     }
+
 }

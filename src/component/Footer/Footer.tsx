@@ -9,7 +9,7 @@ import {
     FaHome
 } from "react-icons/fa";
 
-import { Button, Input, Select, Space } from 'antd';
+import { Button, Input, Space } from 'antd';
 
 function Footer() {
 
@@ -87,7 +87,7 @@ function Footer() {
                         <FaTelegramPlane />
                     </div>
 
-                    <div className="c-item">
+                    <div className="c-item ">
                         <div className="text ">
                             <Space direction="vertical" size="middle">
                                 <Space.Compact className='email-input'>
