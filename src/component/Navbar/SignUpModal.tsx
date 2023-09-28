@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './SignUpModal.css';
 import { Button, Checkbox, Form, Input, Modal } from 'antd';
 import { LockOutlined, LoginOutlined, MailOutlined } from '@ant-design/icons';
 
+// google Oauth  //
+import { GoogleLogin } from '@react-oauth/google';
 function SignUpModal() {
 
     //-------------> Signup Modal <-------------------//
@@ -33,14 +35,16 @@ function SignUpModal() {
                 email: signupForm.getFieldsValue().email,
                 password: signupForm.getFieldsValue().password
             }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
         })
             .then((response) => response.json())
-
 
             .then((data) => {
                 if (data.state) {
                     handleSignupCancel()
-
+                    console.log(data.state)
 
                 }
             })
@@ -83,16 +87,13 @@ function SignUpModal() {
             },
         })
 
-            .then((response) => {
-                response.json();
-                console.log(response)
-            })
+            .then((response) => response.json())
 
             .then((data) => {
-                // console.log(data)
-                // if (data.state) {
-                //     handleLoginCancel()
-                // }
+
+                if (data.state) {
+                    handleLoginCancel()
+                }
             })
             .catch((err) => {
                 console.log(err.message);
@@ -105,14 +106,24 @@ function SignUpModal() {
 
         })();
     }, []);
+    ////////////////////////////////////
+    // google Oauth  //
 
+    const responseMessage = (response: any) => {
+        console.log("====> Login by google" + response);
+        // handleLoginCancel()
+
+    }
+    const errorMessage = (error: string) => {
+        console.log(error);
+    }
     return (
         <>
             {/* -------------> Signup & Login button <---------------- */}
 
             <button type="button" className="p-1 focus:outline-none btn-sign-in"
                 onClick={showSignupModal}>
-                ورود و ثبت نام
+                ثبت نام
             </button>
 
             {/* ------------------> Signup Modal <-------------------- */}
@@ -345,6 +356,9 @@ function SignUpModal() {
                             </Button>
                         </Form.Item>
 
+                        <GoogleLogin onSuccess={responseMessage} />
+                        {/* /onError={errorMessage} */}
+                        <hr />
                         <button
                             className='login-btn'
                             onClick={showSignupModal}

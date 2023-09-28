@@ -5,7 +5,6 @@ import { BankOutlined, CrownOutlined, HomeOutlined, RadarChartOutlined } from '@
 import heroImage from "./HeroSection.jpg";
 import Logo from "../Navbar/logo.png";
 import SearchBar from './SearchBar';
-import SignUpModal from '../Navbar/SignUpModal';
 
 const favCategories = [
     { name: 'ساخت سوله و خرپا', href: 'ساخت سوله و خرپا', icon: <BankOutlined /> },
